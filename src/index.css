@@ -442,6 +442,15 @@ nav .link-styled {
     max-width: 100%;
   }
 } */
+body{
+  background: #000;
+}
+.pacifico{
+  font-family: 'Pacifico', cursive;
+}
+.amatic{
+  font-family: 'Amatic SC', sans-serif;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
