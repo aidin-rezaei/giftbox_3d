@@ -20,6 +20,7 @@ const Header = () => {
                 </div>
             </div>
             <div>
+                <img className="mix-blend-multiply -scale-x-100" src="car.webp" alt="" />
             </div>
         </section>
     );
