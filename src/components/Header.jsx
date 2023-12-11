@@ -8,8 +8,8 @@ const Header = () => {
         })
     }
     return (
-        <section className="w-full h-[calc(100vh_-_45px)] bg-[#ffe4f2] grid grid-cols-2 items-center justify-center">
-            <div className="w-full h-full flex justify-center items-center flex-col gap-10">
+        <section className="w-full h-[calc(100vh_-_45px)] bg-[#ffe4f2] grid grid-cols-2 items-center justify-center" >
+            <div className="w-full h-full flex justify-center items-center flex-col gap-10" id="header">
                 <div className=" h-full flex justify-center items-start flex-col gap-10">
 
                     <h1 className="pacifico text-7xl text-[#c96894]">Register and <br /> get a gift</h1>
