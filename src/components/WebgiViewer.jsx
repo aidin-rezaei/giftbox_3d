@@ -25,6 +25,9 @@ const WebgiViewer = () => {
 
         const manager = await viewer.addPlugin(AssetManagerPlugin)
 
+        const camera = viewer.scene.activeCamera
+        const position = camera.position
+        const target = camera.target
 
         // Add plugins individually.
         await viewer.addPlugin(GBufferPlugin)
@@ -39,13 +42,22 @@ const WebgiViewer = () => {
 
         await manager.addFromPath("scene (4).glb")
 
-        viewer.getPlugin(TonemapPlugin).config.clipBackground=true
+        viewer.getPlugin(TonemapPlugin).config.clipBackground = true
 
+        viewer.scene.activeCamera.setCameraOptions({ controlsEnabled: false })
 
+        window.scrollTo(0, 0)
+
+        let needsUpdate = ture
+
+        viewer.addEventListener('preFrame',()=>{
+            camera.positionTargetUpdated(true)
+            needsUpdate = false
+        })
     }, [])
-    useEffect(()=>{
+    useEffect(() => {
         setupViewer()
-    },[])
+    }, [])
 
     return (
         <div className="h-screen w-screen fixed pointer-events-none top-0 flex justify-center items-center">
