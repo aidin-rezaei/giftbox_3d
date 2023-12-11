@@ -7,7 +7,7 @@ import WebgiViewer from "./components/WebgiViewer";
 function App() {
 
   return (
-    <div className="App">
+    <div className="App gap-10">
       <Nav/>
       <Header/>
       <Second/>
